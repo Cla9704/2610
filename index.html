@@ -1,45 +1,38 @@
+
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
   <title>Anh xin lỗi em</title>
   <style>
     body {
-      background-color: #ffe6eb;
-      margin: 0;
+      background-color: #ffe4ea;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       height: 100vh;
-      flex-direction: column;
-      font-family: 'Arial', sans-serif;
-    }
-
-    .text {
-      font-size: 2.5rem;
-      color: #843C3C;
-      margin-bottom: 20px;
+      margin: 0;
+      font-family: Arial, sans-serif;
     }
 
     .character {
       width: 250px;
-      animation: bow 2s infinite;
+      animation: nod 1s infinite;
       transform-origin: center top;
     }
 
-    @keyframes bow {
+    @keyframes nod {
       0%, 100% {
         transform: rotate(0deg);
       }
       50% {
-        transform: rotate(20deg);
+        transform: rotate(10deg);
       }
     }
   </style>
 </head>
 <body>
-  <div class="text">Anh xin lỗi em</div>
-  <img src="character.png" alt="Anh xin lỗi" class="character">
+  <img src="character.png" alt="Character" class="character">
 </body>
 </html>
