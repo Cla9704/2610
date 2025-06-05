@@ -1,107 +1,45 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Xin lỗi em</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Anh xin lỗi em</title>
   <style>
     body {
-      background-color: #ffeef2;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background-color: #ffe6eb;
       margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+      font-family: 'Arial', sans-serif;
     }
-    .character {
-      width: 200px;
-      height: 200px;
-      background-color: #fff;
-      border-radius: 50%;
-      position: relative;
-      box-shadow: 0 0 20px rgba(0,0,0,0.1);
-      animation: shake 2s infinite;
-    }
-    .eye {
-      width: 20px;
-      height: 20px;
-      background-color: black;
-      border-radius: 50%;
-      position: absolute;
-      top: 60px;
-      animation: blink 4s infinite;
-    }
-    .eye.left {
-      left: 50px;
-    }
-    .eye.right {
-      right: 50px;
-    }
-    .blush {
-      width: 30px;
-      height: 15px;
-      background-color: pink;
-      border-radius: 50%;
-      position: absolute;
-      top: 110px;
-      opacity: 0.6;
-    }
-    .blush.left {
-      left: 40px;
-    }
-    .blush.right {
-      right: 40px;
-    }
-    .tear {
-      width: 6px;
-      height: 12px;
-      background-color: #00f2ff;
-      position: absolute;
-      top: 80px;
-      border-radius: 50%;
-      animation: drop 2s infinite;
-    }
-    .tear.left {
-      left: 55px;
-    }
-    .tear.right {
-      right: 55px;
-    }
-    @keyframes drop {
-      0% { transform: translateY(0); opacity: 1; }
-      100% { transform: translateY(20px); opacity: 0; }
-    }
-    @keyframes shake {
-      0%, 100% { transform: translateX(0); }
-      50% { transform: translateX(-3px); }
-    }
-    @keyframes blink {
-      0%, 90%, 100% { transform: scaleY(1); }
-      95% { transform: scaleY(0.1); }
-    }
+
     .text {
-      margin-top: 20px;
-      font-size: 24px;
-      color: #d6336c;
-      animation: fadeIn 3s ease-in-out;
+      font-size: 2.5rem;
+      color: #843C3C;
+      margin-bottom: 20px;
     }
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
+
+    .character {
+      width: 250px;
+      animation: bow 2s infinite;
+      transform-origin: center top;
+    }
+
+    @keyframes bow {
+      0%, 100% {
+        transform: rotate(0deg);
+      }
+      50% {
+        transform: rotate(20deg);
+      }
     }
   </style>
 </head>
 <body>
-  <div class="character">
-    <div class="eye left"></div>
-    <div class="eye right"></div>
-    <div class="blush left"></div>
-    <div class="blush right"></div>
-    <div class="tear left"></div>
-    <div class="tear right"></div>
-  </div>
   <div class="text">Anh xin lỗi em</div>
+  <img src="character.png" alt="Anh xin lỗi" class="character">
 </body>
 </html>
